@@ -14,7 +14,7 @@ npm o yarn
 
 Pasos:
 
-1. Clonar el repositorio  git clone: https://[github.com/TU-USUARIO/TASKFLOW.git](https://github.com/danikidsz/to-do-react)
+1. Clonar el repositorio  git clone: https://github.com/danikidsz/to-do-react
 2. Entrar al proyecto: cd to-do-react
 3. Instalar dependencias: npm install
 4. Iniciar servidor: npm run dev
