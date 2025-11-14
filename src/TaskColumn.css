@@ -1,0 +1,11 @@
+.task_column_heading{
+    display: flex;
+    align-items: center;
+
+}
+
+.task_column_icon{
+    width: 30px;
+    margin-right: 5px;
+    filter: invert(96%) sepia(5%) saturate(17%) hue-rotate(315deg) brightness(105%) contrast(105%);
+}

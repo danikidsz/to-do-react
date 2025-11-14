@@ -1,0 +1,82 @@
+.app{
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+.app_main{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 8%;
+  color: #ffffff;
+}
+
+.task_column{
+  width: 33.33%;
+  margin: 20px;
+
+}
+ nav{
+  height: 80px;
+
+ }
+
+nav.bg-todo{
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 20%,
+    rgba(155, 0, 250, 1) 80%
+
+  );
+  
+}
+
+nav.bg-todo ul li a{
+  color: #ffffff;
+  
+  
+}
+
+nav.bg-todo a{
+  color: #ffffff;
+ 
+}
+
+.navbar a{
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+ 
+  
+}
+
+
+.summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #141824;
+  border-radius: 8px;
+  font-size: 35px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #9E7BFF;
+}
+
+.summary-value {
+  font-weight: 600;
+  color: #ffffff;
+}

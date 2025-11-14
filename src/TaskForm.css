@@ -1,0 +1,128 @@
+
+
+
+
+.app_main > form{
+    width: 40%;
+    
+}
+.task_form_bottom_line{
+      display: flex;
+  justify-content: center;  /* centra horizontal */
+  align-items: center;
+  width: 100%;              /* que el contenedor sí abarque todo */
+  margin-top: 20px;
+}
+
+.task_input{
+    
+    font-size: 20px;
+    font-weight: 500;
+    background: #f9f9f9;
+    color: #000;;
+    border: 1px solid #dfe3e6;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+   
+    
+}
+
+.task_input_description{
+    font-size: 20px;
+    font-weight: 500;
+    background: #f9f9f9;
+    color: #000;;
+    border: 1px solid #dfe3e6;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+}
+
+
+.task_input::placeholder{
+
+    color: #686868;
+}
+.task_form_bottom_line{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.task_status{
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    padding: 0 5px;
+}
+
+.task_submit{
+   font-size: 16px;
+  font-weight: 500;
+  background: #5D0CFF;
+  color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  padding: 3px 13px;
+  /* margin-left: 10px;  <-- quítalo */
+  margin: 0 auto;          /* opcional: garantiza centrado si falla flex */
+  border: none;
+  cursor: pointer;
+  display: inline-block; 
+
+}
+
+
+/* Prioridad: estilo general */
+
+.priority-group{
+     margin-left: -75px;
+}
+.priority-group .btn {
+  color: white;
+  background-color: transparent;
+  border: 1px solid #a7a7a7;
+  transition: all 0.2s ease;
+}
+
+/* Hover efecto */
+.priority-group .btn:hover {
+  border-color: #5D0CFF;
+  color: #5D0CFF;
+}
+
+/* Activo: morado sólido */
+.priority-group .btn.active,
+.priority-group .btn-check:checked + .btn {
+  background-color: #5D0CFF; /* tu morado */
+  color: white;
+  border-color: #5D0CFF;
+}
+
+/* Quita colores de Bootstrap por defecto */
+.priority-group .btn-outline-success,
+.priority-group .btn-outline-warning,
+.priority-group .btn-outline-danger {
+  border-color: #a7a7a7;
+}
+
+.col-12 {
+justify-content: center;
+}
+
+.justify-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* para que en pantallas pequeñas no se rompa */
+}
