@@ -2,111 +2,165 @@
 
 Muchas gracias por la oportunidad, a continuación estarán los pasos para la instalación y ejecución.
 
-TaskFlow
+# TaskFlow
 
 Aplicación web para gestionar tareas con prioridad, fecha límite, estado y organización por columnas.
 
-Requisitos
+---
 
-Node.js (versión 16 o superior)
+##  Requisitos
 
-npm o yarn
+- Node.js (versión 16 o superior)
+- npm o yarn
 
-Pasos:
+---
 
-1. Clonar el repositorio  git clone: https://github.com/danikidsz/to-do-react
-2. Entrar al proyecto: cd to-do-react
-3. Instalar dependencias: npm install
-4. Iniciar servidor: npm run dev
-5. Abrir en el navegador: http://localhost:5173/
+##  Pasos de instalación
 
-Resumen de funcionalidades
+1. **Clonar el repositorio:**  
+   `git clone https://github.com/danikidsz/to-do-react`
 
-Crear tareas con:
+2. **Entrar al proyecto:**  
+   `cd to-do-react`
 
-Nombre
+3. **Instalar dependencias:**  
+   `npm install`
 
-Descripción
+4. **Iniciar servidor:**  
+   `npm run dev`
 
-Fecha límite (date picker)
+5. **Abrir en el navegador:**  
+   http://localhost:5173/
 
-Prioridad (baja, media, alta)
+---
 
-Estado (pendiente, en proceso, completada)
+##  Resumen de funcionalidades
 
-Eliminar tareas
+### Crear tareas con:
+- Nombre  
+- Descripción  
+- Fecha límite (date picker)  
+- Prioridad (baja, media, alta)  
+- Estado (pendiente, en proceso, completada)  
 
-Resumen dinámico:
+### Gestión:
+- Eliminar tareas
 
-Total de tareas
+### Resumen dinámico:
+- Total de tareas  
+- Tareas completadas  
+- Tareas pendientes  
+- Porcentaje de progreso  
 
-Tareas completadas
+### Otros:
+- Persistencia con LocalStorage
 
-Tareas pendientes
+---
 
-Porcentaje de progreso
+##  Posibles mejoras o actualizaciones
 
-Persistencia y guardado con LocalStorage
+- Incluir diseño responsive y mobile first  
+- Incluir filtro para ver tareas por estado, prioridad o fecha  
+- Reorganizar la app para no mostrar todas las tareas a la vez y evitar agobiar al usuario  
+- Confirmación de acciones (eliminar/agregar tareas)  
+- Editar tareas existentes  
 
-Posibles mejoras o actualizaciones
+---
 
-Incluir diseño responsive y mobile first
+##  Estructura del proyecto
+.
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   ├── clock-history.svg
+│   │   ├── stopwatch-fill.svg
+│   │   ├── check-circle-fill.svg
+│   │   ├── delete.png
+│   │   └── (otros iconos/imágenes)
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   ├── index.css
+│   │
+│   ├── Tag.jsx
+│   ├── Tag.css
+│   │
+│   ├── TaskForm.jsx
+│   ├── TaskForm.css
+│   │
+│   ├── TaskColumn.jsx
+│   ├── TaskColumn.css
+│   │
+│   ├── TaskCard.jsx
+│   └── TaskCard.css
+│
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── eslint.config.js
+├── .gitignore
+└── README.md
 
-Incluir filtro para ver tareas por estado, prioridad o fecha.
+---
 
-Re organizar la app para no mostrar todas las tareas al tiempo y evitar agobiar al usuario.
+##  Respuestas conceptuales
 
-Confirmación de acciones como eliminar o agregar tareas.
+### **1. Diferencia entre props y state**
+R// Los props son datos que un componente padre envía a un componente hijo, mientras que los estados son valores que provocan cambios en componentes.
 
-Editar tareas existentes.
+---
 
-Estructura del proyecto 
-/src
-  ├── App.jsx
-  ├── TaskForm.jsx
-  ├── TaskColumn.jsx
-  ├── TaskCard.jsx
-  ├── assets/
-  ├── styles/
-public/
-index.html
-package.json
-README.md
+### **2. Diferencias entre SSR, CSR y SSG**
+R//  
+- **SSR:** la página se renderiza en el servidor cada vez que el usuario hace peticiones.  
+- **CSR:** todo se renderiza en el cliente.  
+- **SSG:** páginas totalmente estáticas que no requieren cambios constantes.  
 
-Respuestas conceptuales
+---
 
-1. Explica con tus palabras cuál es la diferencia entre props y state en el framework
-frontend que uses.
-R// Los props son datos que un componente padre envía a un componente hijo mientras que los estados son valores que provocan cambios en componentes.
+### **3. Importancia del diseño responsive y estrategias**
+R// El diseño responsive es importante porque permite que la aplicación se vea bien y funcione correctamente sin importar el dispositivo, mejorando la experiencia del usuario.
 
-2. Explica brevemente qué diferencias hay entre SSR (Server Side Rendering), CSR
-(Client Side Rendering) y SSG (Static Site Generation).
+**¿Qué estrategias implemento?**  
+Suelo experimentar bastante e intentar encontrar nuevas formas para mejorar en este tema. En esta prueba no apliqué diseño responsive, pero suelo usar:
+- Componentes flexibles para que los elementos se ajusten solos  
+- Frameworks como Bootstrap con grillas responsive  
+- Mobile first cuando es posible  
 
-R// SSR la página se renderiza en el servidor cuando usuarios hacen peticiones mientras que el CSR renderiza todo en el cliente y por otro lado el SSG es basicamente cuando las páginas son estáticas y no requieren cambios constantes.
+---
 
-3. ¿Por qué es importante el diseño responsive y qué estrategias sueles usar para
-implementarlo?
-R// El diseño responsive es importante porque permite que la aplicación se vea bien y funcione correctamente sin importar el dispositivo y ayuda a mejorar la experiencia de usuario. 
+### **4. Beneficios de una buena estructura de componentes**
+R// Permite reutilizar elementos sin repetir código y facilita la corrección de errores.
 
-¿Qué estrategias implemento?
-Suelo experimentar bastante e intento de encontrar nuevas formas para mejorar en este tema, en esta ocasión no fue posible aplicar un diseño responsibe en la prueba sin embargo suelo utilizar componentes flexibles, para que los elementos se acomoden solos, también  realizo uso de frameworks como Bootstrap, que ya traen un sistema de grillas adaptables y vienen responsive por defecto.
+Yo lo organizo dividiéndolo en componentes pequeños según su función:  
+- **TaskColumn:** agrupa tareas por estado  
+- **TaskCard:** representa una tarjeta individual  
+- **TaskForm:** formulario para agregar tareas  
 
-4. ¿Qué beneficios trae tener una buena estructura de componentes y cómo la organizas
-tú normalmente?
- R// Permite reutilizar durante toda la aplicación evitando repetir código y también ayuda mucho a corregir errores. Para organizarlo suelo dividirlo en componentes o secciones pequeñas que tenga la aplicación, por ejemplo en este caso utilicé TaskColumn que es el espacio donde se alojaron las tareas, TaskCard que representa cada bloque de tarea con su nombre, descripción y demás atributos. Por otro lado también está el TaskForm que es el que permite agregar las tareas.
+---
 
- 5. ¿Cómo manejarías la persistencia y sincronización de datos entre el frontend y el
-backend en una app con usuarios reales?
+### **5. Persistencia y sincronización frontend-backend**
+No tengo experiencia en producción, pero implementaría una API REST conectada a una base de datos.  
+Sincronizaría datos con peticiones HTTP y usaría LocalStorage como caché temporal.
 
-No tengo experiencia en producción, pero implementaría una API REST conectada a una base de datos. Sincronizaría datos con peticiones HTTP en cada acción del usuario y usaría localStorage como caché temporal. 
+---
 
-6. Si tuvieras que optimizar esta app con 1000 tareas, ¿qué harías para evitar
-re-renderizados innecesarios?
+### **6. Optimización si hubiera 1000 tareas**
+Mostraría solo los títulos en una lista colapsada y cargaría los detalles solo al expandir cada tarea.  
+También usaría paginación para no cargar todo de una vez.
 
-Mostraría solo los títulos de las tareas en una lista colapsada, y cargaría los detalles completos solo cuando el usuario seleccione o expanda una tarea. Esto reduce el renderizado inicial y mejora el rendimiento. Complementaría con paginación para no cargar las 1000 tareas de una vez.
+---
 
-7. ¿Podrías mencionar algún patrón de diseño que conozcas y explicar brevemente cómo
-lo aplicarías en una aplicación web?
+### **7. Patrón de diseño**
+Conozco el patrón **Model–View–Controller (MVC)**, que divide la aplicación en datos, interfaz y control.  
+Ya lo he usado en videojuegos para separar lógica, visual y eventos.
 
-He visto un poco el (Model–View–Controller) que divide la aplicación en datos, interfaz y control, lo que ayuda a organizar mejor el código. Ya he usado estrategias similares al desarrollar videojuegos, separando la lógica del juego, la visualización y el manejo de eventos. En una app web lo aplicaría igual: el backend como Model, la interfaz en React como View y las peticiones o acciones del usuario como Controller.
+En una app web:
+- **Model:** backend  
+- **View:** interfaz en React  
+- **Controller:** acciones del usuario / peticiones  
 
+---
